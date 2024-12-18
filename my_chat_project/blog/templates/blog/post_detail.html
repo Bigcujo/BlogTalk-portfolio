@@ -1,0 +1,25 @@
+{% extends "blog/base.html" %}
+{% block content %}
+    <article class="media content-section">
+        <!-- Make the profile image clickable and link to the profile-dashboard -->
+        <a href="{% url 'profile-dashboard' username=object.author.username %}">
+            <img class="rounded-circle article-img" src="{{ object.author.profile.image.url }}" alt="{{ object.author.username }}'s profile image">
+        </a>
+
+        <div class="media-body">
+            <div class="article-metadata">
+                <!-- Make the username clickable, linking to the profile-dashboard -->
+                <a class="mr-2" href="{% url 'profile-dashboard' username=object.author.username %}">{{ object.author.username }}</a>
+                <small class="text-muted">{{ object.date_posted|date:"F d, Y" }}</small>
+
+                {% if object.author == user %}
+                    <!-- Link to update and delete posts only for the current user -->
+                    <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'post-update' object.id %}">Update</a>
+                    <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'post-delete' object.id %}">Delete</a>
+                {% endif %}
+            </div>
+            <h2 class="article-title">{{ object.title }}</h2>
+            <p class="article-content">{{ object.content }}</p>
+        </div>
+    </article>
+{% endblock %}
