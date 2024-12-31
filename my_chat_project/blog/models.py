@@ -24,3 +24,6 @@ class Post(models.Model):
         else:
             return Post.objects.all().order_by('-date_posted')
       
+
+    def get_absolute_url(self):
+        return reverse('post-detail', kwargs={'pk': self.pk})
