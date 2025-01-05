@@ -1,5 +1,7 @@
 {% extends "blog/base.html" %}
 
+{% load static %}
+
 {% block content %}
   <div class="container my-4">
     <h1 class="text-center mb-4">About Us</h1>
@@ -33,7 +35,7 @@
           <!-- Collaborator 1 -->
           <div class="col-md-4 mb-4">
             <div class="card">
-              <img src="https://via.placeholder.com/150" class="card-img-top" alt="Collaborator 1">
+              <img src="{% static 'images/francis.jpg'%}" class="card-img-top" alt="Collaborator 1">
               <div class="card-body">
                 <h5 class="card-title">Francis Ogbogu</h5>
                 <p class="card-text">Back-end Developer</p>
@@ -45,7 +47,7 @@
           <!-- Collaborator 2 -->
           <div class="col-md-4 mb-4">
             <div class="card">
-              <img src="https://via.placeholder.com/150" class="card-img-top" alt="Collaborator 2">
+              <img src="{% static 'images/hannah.jpg'%}" class="card-img-top" alt="Collaborator 2">
               <div class="card-body">
                 <h5 class="card-title">Hannah Sado</h5>
                 <p class="card-text">Front-end Developer</p>
@@ -58,7 +60,7 @@
           
 
         <footer class="mt-5 text-center">
-          <p>&copy; 2025 My Django Project. All rights reserved.</p>
+          <p>&copy; 2025 Blogtalk Project. All rights reserved.</p>
         </footer>
       </div>
     </div>
