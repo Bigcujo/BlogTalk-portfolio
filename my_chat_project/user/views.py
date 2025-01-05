@@ -157,7 +157,7 @@ def profile(request, username=None):
             user_form.save()
             profile_form.save()
             messages.success(request, 'Your profile has been updated!')
-            return redirect('user-profile', username=user.username)  # Redirect to the updated profile page
+            return redirect('user-profile')  # Redirect to the updated profile page
     else:
         user_form = UserUpdateForm(instance=user)
         profile_form = ProfileUpdateForm(instance=user.profile)
