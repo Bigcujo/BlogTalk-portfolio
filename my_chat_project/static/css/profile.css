@@ -106,7 +106,8 @@ body {
   padding-right: 0.8em;
 }
 .wrapper .profile {
-  margin-top: 2.2em;
+  margin-top: 2.5em;
+  padding: 0 15px;
   position: relative;
 }
 .wrapper .profile:after {
