@@ -70,8 +70,10 @@
   
   {% endblock header %}
 
-  {% block content %}{% endblock content %}
-
+  <main id="main-content">
+    {% block content %}{% endblock content %}
+  </main>
+  
   {% block footer %}
   
     {% include 'includes/footer.html' %}
