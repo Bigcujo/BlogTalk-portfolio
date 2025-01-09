@@ -182,6 +182,11 @@ body {
   box-shadow: 0 13px 26px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.16);
   background: linear-gradient(to bottom right, #C90A6D, #FF48A0);
 }
+.wrapper .profile .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(201, 10, 109, 0.2);
+  transition: all 0.3s ease;
+}
 .wrapper .social-icons {
   display: flex;
   margin-top: 1.2em;
