@@ -248,5 +248,9 @@ body {
   color: rgb(172, 25, 102);
   text-decoration: none;
 }
-
+.concept a:hover {
+  color: #FF48A0;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
 /*# sourceMappingURL=profile.css.map */
