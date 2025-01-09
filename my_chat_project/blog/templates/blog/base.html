@@ -35,9 +35,9 @@
                   <a class="nav-item nav-link px-3 text-warning" href="{% url 'user-logout' %}">Logout</a>
               
                 {% else %}
-                  <a class="nav-item nav-link" href="{% url 'user-login' %}">Login</a>
-                  <a class="nav-item nav-link" href="{% url 'user-register' %}">Register</a>
-                {% endif %}
+                  <a class="nav-item nav-link btn btn-outline-light mx-2" href="{% url 'user-login' %}">Login</a>
+                  <a class="nav-item nav-link btn btn-light text-primary" href="{% url 'user-register' %}">Register</a>
+                
               </div>
             </div>
           </div>
