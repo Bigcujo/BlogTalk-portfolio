@@ -199,6 +199,10 @@ body {
   align-items: center;
   flex-direction: column;
 }
+.wrapper .social-icons .icon a:hover {
+  transform: translateY(-3px);
+  transition: all 0.3s ease;
+}
 .wrapper .social-icons .icon a {
   color: #fff;
   width: 60px;
