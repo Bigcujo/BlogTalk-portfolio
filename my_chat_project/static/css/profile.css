@@ -9,7 +9,7 @@ body {
   height: 100vh;
   display: flex;
   position: relative;
-  background: #eeeeec;
+  background: linear-gradient(135deg, #f5f7fa 0%, #eeeeec 100%);
   align-items: center;
   flex-direction: column;
   justify-content: center;
@@ -87,7 +87,8 @@ body {
   transition: background 0.6s ease;
   border-radius: 10px;
   padding: 20px 20px 20px 20px;
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+}
 }
 .wrapper .top-icons i {
   color: #080911;
