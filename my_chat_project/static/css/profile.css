@@ -144,8 +144,10 @@ body {
 }
 .wrapper .profile .name {
   color: #2D354A;
-  font-size: 24px;
+  margin: 10px 0;
+  font-size: 28px;
   font-weight: 600;
+  letter-spacing: 0.5px;
   text-align: center;
 }
 .wrapper .profile .title {
