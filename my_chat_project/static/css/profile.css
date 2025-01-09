@@ -128,7 +128,7 @@ body {
   line-height: 20px;
   text-align: center;
   border-radius: 100%;
-  background: linear-gradient(to bottom right, #C90A6D, #FF48A0);
+  background: linear-gradient(45deg, #C90A6D, #FF48A0);
 }
 .wrapper .profile .thumbnail {
   width: 124px;
@@ -139,7 +139,7 @@ body {
   margin-bottom: 1.5em;
   border: 4px solid #ffffff;
   border-radius: 100%;
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
   box-shadow: 0 13px 26px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 .wrapper .profile .name {
