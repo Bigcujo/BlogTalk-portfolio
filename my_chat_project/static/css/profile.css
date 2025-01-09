@@ -189,7 +189,9 @@ body {
 }
 .wrapper .social-icons {
   display: flex;
-  margin-top: 1.2em;
+  padding: 15px 0;
+  margin-top: 2em;
+  border-top: 1px solid rgba(0,0,0,0.05);
   justify-content: space-between;
 }
 .wrapper .social-icons .icon {
