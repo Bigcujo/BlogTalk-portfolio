@@ -218,6 +218,10 @@ body {
   border-radius: 30px;
   box-shadow: 0 13px 26px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.2);
 }
+.wrapper .social-icons .icon h4 {
+  font-weight: 500;
+  margin-top: 1.5em;
+}
 .wrapper .social-icons .icon:nth-of-type(1) a {
   background: linear-gradient(to bottom right, #C90A6D, #FF48A0);
 }
