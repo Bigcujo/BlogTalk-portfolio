@@ -1,8 +1,6 @@
 # **BlogTalk**  
 A cutting-edge, feature-packed blog platform designed to empower users to share ideas, connect with others, and engage in real-time communication, all while enjoying a seamless and responsive user experience.
 
-![BlogTalk Preview](static/images/chatapp_preview.jpg)  
-
 ---
 
 ## **Table of Contents**
