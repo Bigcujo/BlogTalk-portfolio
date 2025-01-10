@@ -3,19 +3,18 @@ Welcome to **BlogTalk** – A powerful, feature-packed blogging platform built t
 
 ---
 
-## **Table of Contents** 📚  
-| #  | Section                       |  
-| --- | ---------------------------- |  
-| 1  | [Overview](#overview)         |  
-| 2  | [Key Features](#key-features) |  
-| 3  | [Technologies Used](#technologies-used) |  
-| 4  | [Project Structure](#project-structure) |  
-| 5  | [Installation Guide](#installation-guide) |  
-| 6  | [Usage](#usage)               |  
-| 7  | [Frontend Highlights](#frontend-highlights) |  
-| 8  | [Backend Highlights](#backend-highlights) |  
-| 9  | [Contributing](#contributing) |  
-| 10 | [License](#license)           |  
+## **Table of Contents**
+1. [Overview](#overview)  
+2. [Key Features](#key-features)  
+3. [Technologies Used](#technologies-used)  
+4. [Project Structure](#project-structure)  
+5. [Installation Guide](#installation-guide)  
+6. [Usage](#usage)  
+7. [Frontend Highlights](#frontend-highlights)  
+8. [Backend Highlights](#backend-highlights)  
+9. [Contributing](#contributing)  
+10. [License](#license)  
+11. [Acknowledgments](#acknowledgments)
 
 ---
 
