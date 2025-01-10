@@ -19,12 +19,12 @@ Welcome to **BlogTalk** – A powerful, feature-packed blogging platform built t
 ---
 
 ## **Overview** 
-🌐  
+ 
 BlogTalk is a modern, feature-rich blogging platform designed with both aesthetics and functionality in mind. Powered by Django and Bootstrap, it offers a seamless user experience for managing blog posts, engaging in real-time chats, and customizing user profiles. Whether you're a content creator, reader, or just a social user, BlogTalk is tailored for an interactive and intuitive experience.
 
 ---
 
-## **Key Features**    🌟  
+## **Key Features**
 
 ### **User Features** 🧑‍💻  
 - **Authentication**: Quick and secure user registration and login.  
@@ -52,7 +52,7 @@ BlogTalk is a modern, feature-rich blogging platform designed with both aestheti
 
 ---
 
-## **Technologies Used** ⚙️  
+## **Technologies Used**   
 
 ### **Backend**  
 | Technology         | Description                               |  
@@ -77,7 +77,7 @@ BlogTalk is a modern, feature-rich blogging platform designed with both aestheti
 
 ---
 
-## **Project Structure** 🗂️  
+## **Project Structure**   
 Here’s an overview of the folder structure for BlogTalk:
 
 ```
@@ -106,7 +106,7 @@ my_chat_project/
 
 ---
 
-## **Installation Guide** 💻  
+## **Installation Guide**   
 
 ### **1. Clone the Repository**  
 To get started, clone the repository to your local machine:  
@@ -144,7 +144,7 @@ Now, access the app at **http://127.0.0.1:8000/**.
 
 ---
 
-## **Frontend Highlights** 🎉  
+## **Frontend Highlights**   
 
 - **Navigation Bar**: Fully responsive with links to all sections – Blog, Profile, Chat.  
 - **Blog Grid**: Bootstrap-powered layout for easy reading and visual appeal.  
@@ -153,7 +153,7 @@ Now, access the app at **http://127.0.0.1:8000/**.
 
 ---
 
-## **Backend Highlights** 🚀  
+## **Backend Highlights**   
 
 - **WebSocket Support**: Seamless real-time communication through Django Channels.  
 - **Scalable Structure**: Modular design ensuring scalability and maintainability.  
@@ -161,7 +161,7 @@ Now, access the app at **http://127.0.0.1:8000/**.
 
 ---
 
-## **Contributing** 🤝
+## **Contributing** 
 
 ### **How to Contribute**  
 To contribute to BlogTalk, please follow these steps:  
@@ -186,12 +186,12 @@ To contribute to BlogTalk, please follow these steps:
 
 ---
 
-## **License** 📝  
+## **License**  
 This project is licensed under the **MIT License**. See the `LICENSE` file for more information.
 
 ---
 
-## **Acknowledgments** 🙏  
+## **Acknowledgments**   
 We would like to thank all contributors to BlogTalk for their efforts. Special thanks to:  
 - **Francis Ogbogu**: [GitHub](https://github.com/Bigcujo) – Backend Development  
 - **Hannah Sado**: [GitHub](https://github.com/s-channah) – Frontend Development
