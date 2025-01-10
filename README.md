@@ -18,14 +18,17 @@ Welcome to **BlogTalk** – A powerful, feature-packed blogging platform built t
 
 ---
 
-## **Overview** 🌐  
+## **Overview** 
+🌐  
 BlogTalk is a modern, feature-rich blogging platform designed with both aesthetics and functionality in mind. Powered by Django and Bootstrap, it offers a seamless user experience for managing blog posts, engaging in real-time chats, and customizing user profiles. Whether you're a content creator, reader, or just a social user, BlogTalk is tailored for an interactive and intuitive experience.
 
 ---
 
-## **Key Features** 🌟  
+## **Key Features** 
+🌟  
 
-### **User Features** 🧑‍💻  
+### **User Features** 
+🧑‍💻  
 - **Authentication**: Quick and secure user registration and login.  
 - **Profile Management**: Personalize your profile with avatar uploads and bio updates.  
 - **Custom Dashboards**: Access your personalized feed and content effortlessly.
