@@ -1,68 +1,231 @@
 {% extends "blog/base.html" %}
-
 {% load static %}
 
 {% block content %}
-  <div class="container my-4">
-    <h1 class="text-center mb-4">About Us</h1>
+<style>
+    .about-section {
+        background: linear-gradient(to bottom, var(--bg-blue), #ffffff);
+        border-radius: 24px;
+        padding: 3rem 2rem;
+        box-shadow: 0 4px 24px rgba(10, 37, 64, 0.05);
+    }
 
-    <div class="row">
-      <div class="col-md-8 offset-md-2">
-        <h2 class="text-center">Welcome to Our Django Project!</h2>
-        <p>
-          Our Django project is a feature-rich web application built to help users interact, share content, and engage with one another in meaningful ways.
-        </p>
-        <p>
-          We focus on providing a smooth user experience with modern tools and frameworks like Django, Bootstrap, and more.
-        </p>
+    .section-title {
+        font-family: 'Space Grotesk', sans-serif;
+        color: var(--primary-blue);
+        font-weight: 700;
+        font-size: 2.5rem;
+        letter-spacing: -0.02em;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        position: relative;
+    }
 
-        <h3 class="mt-4">Key Features</h3>
-        <ul>
-          <li>User authentication (Login, Register, Logout)</li>
-          <li>User profiles and dashboards</li>
-          <li>Real-time chat functionality</li>
-          <li>Easy content sharing and blogging</li>
-        </ul>
+    .section-title::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(to right, var(--accent-blue), var(--highlight-blue));
+        margin: 1rem auto;
+        border-radius: 2px;
+    }
 
-        <h3 class="mt-4">Our Goal</h3>
-        <p>
-          The goal of this project is to create an engaging platform that allows users to connect, share their stories, and collaborate in a friendly environment.
-        </p>
+    .subsection-title {
+        font-family: 'Space Grotesk', sans-serif;
+        color: var(--secondary-blue);
+        font-weight: 600;
+        font-size: 1.75rem;
+        margin: 2.5rem 0 1.5rem;
+    }
 
-        <!-- Collaborators Section -->
-        <h3 class="mt-5 text-center">Meet Our Collaborators</h3>
+    .about-text {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: var(--text-secondary);
+        margin-bottom: 1.5rem;
+    }
+
+    .features-list {
+        list-style: none;
+        padding: 0;
+        margin: 2rem 0;
+    }
+
+    .features-list li {
+        padding: 1rem 1.5rem;
+        margin-bottom: 1rem;
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 2px 12px rgba(10, 37, 64, 0.05);
+        display: flex;
+        align-items: center;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .features-list li:hover {
+        transform: translateX(10px);
+        box-shadow: 0 4px 16px rgba(10, 37, 64, 0.08);
+    }
+
+    .features-list li i {
+        color: var(--accent-blue);
+        font-size: 1.25rem;
+        margin-right: 1rem;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--bg-blue);
+        border-radius: 8px;
+    }
+
+    .team-section {
+        margin-top: 4rem;
+    }
+
+    .collaborator-card {
+        border: none;
+        border-radius: 16px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background: #ffffff;
+        box-shadow: 0 4px 24px rgba(10, 37, 64, 0.05);
+    }
+
+    .collaborator-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 32px rgba(10, 37, 64, 0.08);
+    }
+
+    .collaborator-card img {
+        height: 250px;
+        object-fit: cover;
+        border-bottom: 4px solid var(--accent-blue);
+    }
+
+    .collaborator-card .card-body {
+        padding: 1.5rem;
+    }
+
+    .collaborator-card .card-title {
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 600;
+        color: var(--primary-blue);
+        margin-bottom: 0.5rem;
+    }
+
+    .collaborator-card .card-text {
+        color: var(--text-secondary);
+        font-size: 0.95rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .social-link {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.75rem 1.5rem;
+        background: linear-gradient(135deg, var(--accent-blue), var(--light-blue));
+        color: white;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: transform 0.2s ease;
+    }
+
+    .social-link:hover {
+        transform: translateY(-2px);
+        color: white;
+        filter: brightness(1.1);
+    }
+
+    .social-link i {
+        margin-right: 0.5rem;
+    }
+    
+    .news-section {
+        margin-top: 4rem;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .page-footer {
+        margin-top: 5rem;
+        padding: 2rem 0;
+        border-top: 1px solid rgba(10, 37, 64, 0.1);
+        color: var(--text-secondary);
+        font-size: 0.95rem;
+    }
+</style>
+
+<div class="container">
+    <div class="about-section">
+        <h1 class="section-title">About Us</h1>
+
         <div class="row">
-          <!-- Collaborator 1 -->
-          <div class="col-md-4 mb-4">
-            <div class="card">
-              <img src="{% static 'images/francis.jpg'%}" class="card-img-top" alt="Collaborator 1">
-              <div class="card-body">
-                <h5 class="card-title">Francis Ogbogu</h5>
-                <p class="card-text">Back-end Developer</p>
-                <a href="https://github.com/Bigcujo" class="btn btn-primary">Github</a>
-              </div>
+            <div class="col-lg-10 offset-lg-1">
+                <h2 class="subsection-title text-center">Welcome to Our Django Project!</h2>
+                <p class="about-text">
+                    Our Django project is a feature-rich web application built to help users interact, share content, and engage with one another in meaningful ways.
+                </p>
+                <p class="about-text">
+                    We focus on providing a smooth user experience with modern tools and frameworks like Django, Bootstrap, and more.
+                </p>
+
+                <h3 class="subsection-title">Key Features</h3>
+                <ul class="features-list">
+                    <li><i class="fas fa-user-lock"></i>User authentication (Login, Register, Logout)</li>
+                    <li><i class="fas fa-user-circle"></i>User profiles and dashboards</li>
+                    <li><i class="fas fa-comments"></i>Real-time chat functionality</li>
+                    <li><i class="fas fa-share-alt"></i>Easy content sharing and blogging</li>
+                </ul>
+
+                <h3 class="subsection-title">Our Goal</h3>
+                <p class="about-text">
+                    The goal of this project is to create an engaging platform that allows users to connect, share their stories, and collaborate in a friendly environment.
+                </p>
+
+                <div class="team-section">
+                    <h3 class="section-title">Meet Our Collaborators</h3>
+                    <div class="row g-4">
+                        <!-- Collaborator 1 -->
+                        <div class="col-md-6">
+                            <div class="collaborator-card card h-100">
+                                <img src="{% static 'images/francis.jpg'%}" class="card-img-top" alt="Francis Ogbogu">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Francis Ogbogu</h5>
+                                    <p class="card-text">Back-end Developer</p>
+                                    <a href="https://github.com/Bigcujo" class="social-link">
+                                        <i class="fab fa-github"></i>GitHub Profile
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Collaborator 2 -->
+                        <div class="col-md-6">
+                            <div class="collaborator-card card h-100">
+                                <img src="{% static 'images/hannah.jpg'%}" class="card-img-top" alt="Hannah Sado">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Hannah Sado</h5>
+                                    <p class="card-text">Front-end Developer</p>
+                                    <a href="http://github.com/s-channah" class="social-link">
+                                        <i class="fab fa-github"></i>GitHub Profile
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <footer class="page-footer text-center">
+                    <p>&copy; 2025 Blogtalk Project. All rights reserved.</p>
+                </footer>
             </div>
-          </div>
-
-          <!-- Collaborator 2 -->
-          <div class="col-md-4 mb-4">
-            <div class="card">
-              <img src="{% static 'images/hannah.jpg'%}" class="card-img-top" alt="Collaborator 2">
-              <div class="card-body">
-                <h5 class="card-title">Hannah Sado</h5>
-                <p class="card-text">Front-end Developer</p>
-                <a href="http://github.com/s-channah" class="btn btn-primary">GitHub</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Collaborator 3 -->
-          
-
-        <footer class="mt-5 text-center">
-          <p>&copy; 2025 Blogtalk Project. All rights reserved.</p>
-        </footer>
-      </div>
+        </div>
     </div>
-  </div>
+</div>
 {% endblock %}
