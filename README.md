@@ -24,11 +24,9 @@ BlogTalk is a modern, feature-rich blogging platform designed with both aestheti
 
 ---
 
-## **Key Features** 
-🌟  
+## **Key Features**    🌟  
 
-### **User Features** 
-🧑‍💻  
+### **User Features** 🧑‍💻  
 - **Authentication**: Quick and secure user registration and login.  
 - **Profile Management**: Personalize your profile with avatar uploads and bio updates.  
 - **Custom Dashboards**: Access your personalized feed and content effortlessly.
