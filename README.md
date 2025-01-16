@@ -1,4 +1,4 @@
-# **BlogTalk**  
+# **BlogTalk**  git checkout -b cujo_branch origin/cujo_branch 
 Welcome to **BlogTalk** – A powerful, feature-packed blogging platform built to enhance the way users create, share, and interact. With a clean design and a robust backend, BlogTalk is more than just a platform – it's an experience that empowers users to connect and communicate in real time.
 
 ---
