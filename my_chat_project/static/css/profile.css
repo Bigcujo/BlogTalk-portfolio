@@ -9,7 +9,7 @@ body {
   height: 100vh;
   display: flex;
   position: relative;
-  background: #eeeeec;
+  background: linear-gradient(135deg, #f5f7fa 0%, #eeeeec 100%);
   align-items: center;
   flex-direction: column;
   justify-content: center;
@@ -39,7 +39,8 @@ body {
   height: 40px;
   background: #ccc;
   border-radius: 20px;
-  transition: background 0.75s;
+  transition: all 0.4s ease;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
 }
 .customSlider + label:after {
   height: 34px;
@@ -81,13 +82,14 @@ body {
 }
 
 .wrapper {
-  width: 320px;
+  width: min(320px, 90vw);
+  margin: 0 auto;
   height: 540px;
   background: #FDFEFF;
   transition: background 0.6s ease;
   border-radius: 10px;
   padding: 20px 20px 20px 20px;
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
 }
 .wrapper .top-icons i {
   color: #080911;
@@ -103,7 +105,8 @@ body {
   padding-right: 0.8em;
 }
 .wrapper .profile {
-  margin-top: 2.2em;
+  margin-top: 2.5em;
+  padding: 0 15px;
   position: relative;
 }
 .wrapper .profile:after {
@@ -127,7 +130,7 @@ body {
   line-height: 20px;
   text-align: center;
   border-radius: 100%;
-  background: linear-gradient(to bottom right, #C90A6D, #FF48A0);
+  background: linear-gradient(45deg, #C90A6D, #FF48A0);
 }
 .wrapper .profile .thumbnail {
   width: 124px;
@@ -136,19 +139,23 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1.5em;
+  border: 4px solid #ffffff;
   border-radius: 100%;
+  transition: transform 0.2s ease;
   box-shadow: 0 13px 26px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 .wrapper .profile .name {
   color: #2D354A;
-  font-size: 24px;
+  margin: 10px 0;
+  font-size: 28px;
   font-weight: 600;
+  letter-spacing: 0.5px;
   text-align: center;
 }
 .wrapper .profile .title {
-  color: #7C8097;
-  font-size: 0.75em;
-  font-weight: 300;
+  color: #666B7D;
+  font-size: 0.85em;
+  font-weight: 400;
   text-align: center;
   padding-top: 0.5em;
   padding-bottom: 0.7em;
@@ -156,9 +163,11 @@ body {
   text-transform: uppercase;
 }
 .wrapper .profile .description {
-  color: #080911;
+  color: #4a4a4a;
   font-size: 14px;
+  line-height: 1.6;
   font-weight: 300;
+  margin: 15px 0;
   text-align: center;
   margin-bottom: 1.3em;
 }
@@ -177,15 +186,26 @@ body {
   box-shadow: 0 13px 26px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.16);
   background: linear-gradient(to bottom right, #C90A6D, #FF48A0);
 }
+.wrapper .profile .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(201, 10, 109, 0.2);
+  transition: all 0.3s ease;
+}
 .wrapper .social-icons {
   display: flex;
-  margin-top: 1.2em;
+  padding: 15px 0;
+  margin-top: 2em;
+  border-top: 1px solid rgba(0,0,0,0.05);
   justify-content: space-between;
 }
 .wrapper .social-icons .icon {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+.wrapper .social-icons .icon a:hover {
+  transform: translateY(-3px);
+  transition: all 0.3s ease;
 }
 .wrapper .social-icons .icon a {
   color: #fff;
@@ -196,6 +216,10 @@ body {
   text-align: center;
   border-radius: 30px;
   box-shadow: 0 13px 26px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+.wrapper .social-icons .icon h4 {
+  font-weight: 500;
+  margin-top: 1.5em;
 }
 .wrapper .social-icons .icon:nth-of-type(1) a {
   background: linear-gradient(to bottom right, #C90A6D, #FF48A0);
@@ -228,5 +252,9 @@ body {
   color: rgb(172, 25, 102);
   text-decoration: none;
 }
-
+.concept a:hover {
+  color: #FF48A0;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
 /*# sourceMappingURL=profile.css.map */

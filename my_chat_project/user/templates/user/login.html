@@ -1,4 +1,3 @@
-<!-- users/templates/users/login.html -->
 {% extends "user/base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
@@ -10,6 +9,12 @@
                 {{ form|crispy }}
             </fieldset>
             <div class="form-group">
+                <label for="show-password">
+                    <input type="checkbox" id="show-password" onclick="togglePasswordVisibility('id_password')">
+                    Show Password
+                </label>
+            </div>
+            <div class="form-group">
                 <button class="btn btn-outline-info" type="submit">Login</button>
             </div>
             {% if next %}
@@ -18,8 +23,18 @@
         </form>
         <div class="border-top pt-3">
             <small class="text-muted">
-                you need account chief ? <a class="mal-2" href="{% url 'user-register' %}"> Oya Sign up here</a>
+                Shay you need account, chief? <a class="mal-2" href="{% url 'user-register' %}"> Oya Sign up here</a>
             </small>
         </div>
     </div>
+    <script>
+        function togglePasswordVisibility(passwordFieldId) {
+            const passwordField = document.getElementById(passwordFieldId);
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+            } else {
+                passwordField.type = "password";
+            }
+        }
+    </script>
 {% endblock content %}

@@ -6,9 +6,10 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Primary Meta Tags -->
-    <title>Free Bootstrap 5 UI Kit</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}Free Bootstrap 5 UI Kit{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, shrink-to-fit=no">
     <meta name="title" content="Free Bootstrap 5 UI Kit">
     
     <meta name="description" content="Open source and free Bootstrap 5 UI Kit featuring 80 UI components, 5 example pages, and a Gulp and Sass workflow.">
@@ -36,6 +37,7 @@
     <link rel="mask-icon" href="{% static 'assets/img/favicon/safari-pinned-tab.svg' %}" color="#ffffff">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
+    <meta name="color-scheme" content="light dark">
     
     <!-- Fontawesome -->
     <link type="text/css" href="{% static 'vendor/@fortawesome/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
@@ -43,9 +45,43 @@
     <!-- Pixel CSS -->
     <link type="text/css" href="{% static 'css/pixel.css' %}" rel="stylesheet">
     
+    <link type="text/css" href="{% static 'css/print.css' %}" rel="stylesheet" media="print">
+
+    <style>
+      body {
+        padding-top: 60px;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .page-transition {
+        transition: opacity 0.3s ease-in-out;
+      }
+      .page-loading {
+        opacity: 0.6;
+      }
+      .navbar {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1030;
+      }
+    </style>
+
 </head>
 
 <body>
+  <a href="#main-content" class="visually-hidden-focusable">Skip to main content</a>
+
+  <noscript>
+    <div class="alert alert-warning text-center">
+      Please enable JavaScript for the best experience.
+    </div>
+  </noscript>
+
+  <div class="progress position-fixed w-100 d-none" style="height: 3px; z-index: 1050;" id="page-load-progress">
+    <div class="progress-bar" role="progressbar"></div>
+  </div>
 
   {% block header %}
   
@@ -53,7 +89,9 @@
   
   {% endblock header %}
 
-  {% block content %}{% endblock content %}
+  <main id="main-content">
+    {% block content %}{% endblock content %}
+  </main>
 
   {% block footer %}
   
@@ -64,6 +102,17 @@
   {% include 'includes/scripts.html' %}
   {% block javascripts %}{% endblock javascripts %}
 
+  <button id="scroll-top" class="btn btn-primary position-fixed bottom-0 end-0 m-3 d-none">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <div id="error-boundary" class="alert alert-danger d-none fixed-bottom m-3">
+    An error occurred. Please refresh the page.
+  </div>
+
+  <div id="offline-notification" class="alert alert-warning fixed-bottom m-3 d-none">
+    You are currently offline. Some features may be unavailable.
+  </div>
 
 </body>
 

@@ -96,4 +96,36 @@ body {
     font-size: 2.5rem;
     color: #003366; /* Dark Blue */
   }
-  
+  /* In static/blog/main.css */
+.hover-shadow:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+.transition-300 {
+  transition: all .3s ease;
+}
+
+.hover-primary:hover {
+  color: var(--bs-primary) !important;
+}
+
+.page-link {
+  color: var(--bs-primary);
+  border-radius: 0.25rem;
+  margin: 0 2px;
+}
+
+.page-item.active .page-link {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+
+.card {
+  border: none;
+  border-radius: 1rem;
+}
+
+.card-body {
+  padding: 1.5rem;
+}

@@ -14,15 +14,10 @@ from django.views.generic import  (
     DeleteView
 )
 
-""""
+
 def home(request):
-    posts = Post.objects.all()
-    print(posts)
-    context = {
-        'posts': Post.objects.all()
-    }
-    return render(request, 'blog/home.html', context)
-"""
+    return render(request, 'home.html', {'title': 'Home'})
+
 
 class PostListView(ListView):
     model = Post

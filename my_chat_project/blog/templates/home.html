@@ -1,0 +1,318 @@
+{% extends "blog/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="hero-section position-relative overflow-hidden">
+    <!-- Gradient Background -->
+    <div class="hero-backdrop position-absolute w-100 h-100" 
+         style="background: linear-gradient(135deg, #0A2463 0%, #0A2463 100%);
+                opacity: 0.98;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                border-bottom-left-radius: 20px;
+		border-bottom-right-radius: 20px;
+                z-index: -1;">
+    </div>
+    
+    <!-- Subtle Pattern Overlay -->
+    <div class="hero-pattern position-absolute w-100 h-100" 
+         style="background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCI+CiAgPHBhdGggZD0iTTAgMGg2MHY2MEgweiIgZmlsbD0ibm9uZSIvPgogIDxwYXRoIGQ9Ik0wIDBoNjB2NjBIMHoiIGZpbGw9IiMxMTJhNmEiIG9wYWNpdHk9IjAuMiIvPgogIDxwYXRoIGQ9Ik0zMCAzMG0tMjUgMGEyNSwyNSAwIDEsMSA1MCAwYTI1LDI1IDAgMSwxIC01MCAwIiBmaWxsPSJub25lIiBzdHJva2U9IiMxMTJhNmEiIHN0cm9rZS13aWR0aD0iMC41Ii8+Cjwvc3ZnPg==');
+                background-repeat: repeat;
+                opacity: 0.08;
+                z-index: -1;
+                filter: blur(0.5px);">
+    </div>
+
+    <div class="container py-lg-7 py-5">
+        <div class="row justify-content-center align-items-center min-vh-75 text-center">
+            <div class="col-lg-8 py-4">
+                <!-- Main Heading -->
+                <h1 class="display-3 fw-bold mb-4 text-white animate-text main-heading"
+                    style="text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                           letter-spacing: -0.02em;
+                           font-family: 'Montserrat', sans-serif;">
+                    Enhance Your 
+                    <span class="text-gradient"
+                          style="background: linear-gradient(135deg, #FF6B6B 0%, #FFE66D 100%);
+                                 -webkit-background-clip: text;
+                                 -webkit-text-fill-color: transparent;
+                                 display: inline-block;
+                                 font-family: 'Montserrat', sans-serif;
+                                 font-weight: 800;">
+                        Blogging
+                    </span> 
+                    Experience
+                </h1>
+
+                <!-- Subheading -->
+                <p class="lead mb-5 text-light fw-normal description-text"
+                   style="opacity: 0.95;
+                          padding-top: 20px;
+                          margin-top: 20px;
+                          line-height: 1.8;
+                          max-width: 800px;
+                          margin-left: auto;
+                          margin-right: auto;
+                          font-size: 1.25rem;
+                          font-family: 'Inter', sans-serif;">
+                    BlogTalk is more than just a platform – it's a thriving community where content creators connect, share, and interact in real time. Experience the power of modern blogging with our feature-rich platform.
+                </p>
+
+                <!-- Call-to-Action Buttons -->
+                <div class="d-flex justify-content-center gap-4 flex-wrap">
+                    <button onclick="location.href='#features'" 
+                            class="btn btn-primary btn-lg px-5 py-3 rounded-pill"
+                            style="transition: all 0.3s ease;
+                                   background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
+                                   border: none;
+                                   padding-top: 20px;
+                                   box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);">
+                        <i class="fas fa-compass me-2"></i>
+                        Discover Features
+                    </button>
+                    <button onclick="location.href='#community'" 
+                            class="btn btn-outline-light btn-lg px-5 py-3 rounded-pill"
+                            style="transition: all 0.3s ease;
+                                   border-width: 2px;
+                                   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);">
+                        <i class="fas fa-users me-2"></i>
+                        Join Community
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Import Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@800&family=Inter:wght@400;500&display=swap');
+
+    .hero-section {
+        position: relative;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .main-heading {
+        font-family: 'Playfair Display', serif;
+    }
+
+    .description-text {
+        font-family: 'Inter', sans-serif;
+    }
+
+    .btn {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+    }
+
+    .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+
+    .animate-text {
+        animation: fadeInUp 0.8s ease-out;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .display-3 {
+            font-size: 2.5rem;
+        }
+        .lead {
+            font-size: 1.1rem;
+        }
+        .btn-lg {
+            padding: 0.75rem 2rem !important;
+        }
+    }
+</style>
+
+
+<!-- Features Section -->
+<section id="features" class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold mb-3" style="color: #0A2463;">Powerful Features for Modern Blogging</h2>
+            <p class="lead text-muted">Everything you need to create, share, and engage with your audience</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="feature-icon rounded-circle p-3 me-3" style="background-color: rgba(10, 36, 99, 0.1);">
+                                <i class="fas fa-user-shield fa-2x" style="color: #0A2463;"></i>
+                            </div>
+                            <h3 class="h5 mb-0">Secure Authentication</h3>
+                        </div>
+                        <p class="text-muted">Quick registration process with robust security measures to protect your account and content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="feature-icon rounded-circle p-3 me-3" style="background-color: rgba(10, 36, 99, 0.1);">
+                                <i class="fas fa-edit fa-2x" style="color: #0A2463;"></i>
+                            </div>
+                            <h3 class="h5 mb-0">Rich Text Editor</h3>
+                        </div>
+                        <p class="text-muted">Create professional-looking content with our intuitive and feature-rich text editor.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="feature-icon rounded-circle p-3 me-3" style="background-color: rgba(10, 36, 99, 0.1);">
+                                <i class="fas fa-comments fa-2x" style="color: #0A2463;"></i>
+                            </div>
+                            <h3 class="h5 mb-0">Live Chat Rooms</h3>
+                        </div>
+                        <p class="text-muted">Connect with fellow bloggers in real-time through WebSocket-powered chat rooms.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="feature-icon rounded-circle p-3 me-3" style="background-color: rgba(10, 36, 99, 0.1);">
+                                <i class="fas fa-mobile-alt fa-2x" style="color: #0A2463;"></i>
+                            </div>
+                            <h3 class="h5 mb-0">Mobile Optimized</h3>
+                        </div>
+                        <p class="text-muted">Enjoy a seamless experience across all devices with our responsive Bootstrap 5 design.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="feature-icon rounded-circle p-3 me-3" style="background-color: rgba(10, 36, 99, 0.1);">
+                                <i class="fas fa-tachometer-alt fa-2x" style="color: #0A2463;"></i>
+                            </div>
+                            <h3 class="h5 mb-0">Custom Dashboard</h3>
+                        </div>
+                        <p class="text-muted">Access your personalized feed and manage your content from a centralized dashboard.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="feature-icon rounded-circle p-3 me-3" style="background-color: rgba(10, 36, 99, 0.1);">
+                                <i class="fas fa-bolt fa-2x" style="color: #0A2463;"></i>
+                            </div>
+                            <h3 class="h5 mb-0">Redis Caching</h3>
+                        </div>
+                        <p class="text-muted">Experience lightning-fast performance with our optimized caching system.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Technology Stack -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold mb-3" style="color: #0A2463;">Built with Modern Technologies</h2>
+            <p class="lead text-muted">Powered by industry-leading frameworks and tools</p>
+        </div>
+        <div class="row g-4 justify-content-center text-center">
+            <div class="col-6 col-md-3">
+                <div class="p-4 bg-white rounded-3 shadow-sm h-100">
+                    <i class="fab fa-python fa-3x mb-3" style="color: #0A2463;"></i>
+                    <h4 class="h5">Django 5.1</h4>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="p-4 bg-white rounded-3 shadow-sm h-100">
+                    <i class="fab fa-bootstrap fa-3x mb-3" style="color: #0A2463;"></i>
+                    <h4 class="h5">Bootstrap 5</h4>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="p-4 bg-white rounded-3 shadow-sm h-100">
+                    <i class="fas fa-bolt fa-3x mb-3" style="color: #0A2463;"></i>
+                    <h4 class="h5">Redis</h4>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="p-4 bg-white rounded-3 shadow-sm h-100">
+                    <i class="fas fa-code fa-3x mb-3" style="color: #0A2463;"></i>
+                    <h4 class="h5">WebSocket</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section id="team" class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold mb-3" style="color: #0A2463;">Meet Our Team</h2>
+            <p class="lead text-muted">The developers behind BlogTalk</p>
+        </div>
+        <div class="row justify-content-center g-4">
+            <div class="col-md-6">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <img src="{% static 'images/francis.jpg'%}" alt="Francis Ogbogu" class="rounded-circle mb-3" style="width: 100px; height: 100px;">
+                        <h3 class="h5 mb-2">Francis Ogbogu</h3>
+                        <p class="text-muted mb-3">Backend Development</p>
+                        <a href="https://github.com/Bigcujo" class="text-decoration-none" style="color: #0A2463;">
+                            <i class="fab fa-github fa-lg"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <img src="{% static 'images/hannah.jpg'%}" alt="Hannah Sado" class="rounded-circle mb-3" style="width: 100px; height: 100px;">
+                        <h3 class="h5 mb-2">Hannah Sado</h3>
+                        <p class="text-muted mb-3">Frontend Development</p>
+                        <a href="https://github.com/s-channah" class="text-decoration-none" style="color: #0A2463;">
+                            <i class="fab fa-github fa-lg"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section id="community" style="background-color: #0A2463;" class="text-white py-5">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-4" style="font-size: 2.5rem; color: #FFFFFF;">Ready to Start Your Blogging Journey?</h2>
+        <p class="lead mb-4" style="font-size: 1.2rem; color: #E0E0E0;">Join our community of content creators and start sharing your stories today.</p>
+        <button onclick="location.href='/user/register/'" class="btn btn-warning btn-lg px-5 rounded-pill hover-lift" style="background-color: #FFFFFF; border-color: #F1C40F; color: #3066be; transition: all 0.3s ease-in-out;">Get Started Now</button>
+    </div>
+</section>
+{% endblock %}
+
